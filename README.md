@@ -1,49 +1,75 @@
-https://movies.shawaz.org
+# TMDB Movie App
 
-## React Movie App
-This is a React-based movie app that allows users to browse and explore movies. It provides features such as user authentication, movie listing, and movie details.
+A React movie discovery app powered by the TMDB API. Search, browse trending titles, and view details.
 
-Getting Started
-To get started with the project on your own machine, follow these steps:
+## Current State
 
-Clone the repository to your local machine.
+- **Status:** Working
+- **Last real activity:** 2024-07-29 -- CNAME and deployment
+- **Deployed:** [movies.shawaz.org](https://movies.shawaz.org) via GitHub Pages
 
-Install the dependencies by running the following command in the project directory:
+## Features
 
-    npm install
-Create a Firebase project and set up the necessary configurations for authentication. Make sure to update the Firebase configuration in the firebase.js file with your own API keys and other credentials.
+- Browse and search movies via the TMDB API
+- User authentication (email/password and Google sign-in)
+- Movie detail pages with descriptions and metadata
+- Password reset flow
+- Toast notifications
 
-Start the development server:
+## Setup
 
-    npm start
-This will start the application on http://localhost:3000.
+### Prerequisites
 
-Open the application in your web browser and start exploring the movies.
+- Node.js >= 18
 
-Features
-User Authentication: Users can sign up, log in, and log out of the application using email and password credentials. Google sign-in is also available.
+### Environment Variables
 
-Movie Listing: Users can browse a list of movies and view details about each movie.
+- `VITE_apiKey`
+- `VITE_authDomain`
+- `VITE_projectId`
+- `VITE_storageBucket`
+- `VITE_messagingSenderId`
+- `VITE_appId`
+- `VITE_measurementId`
+- `VITE_MOVIE_API_KEY`
 
-Movie Details: Users can view detailed information about a selected movie, including its title, description, and other relevant details.
+### Run
 
-Tech Stack
-The project is built using the following technologies:
+```bash
+npm install
+npm run dev
+```
 
-React: A JavaScript library for building user interfaces.
+### Build
 
-React Router: A library for routing and navigation in React applications.
+```bash
+npm run build
+npm run preview
+```
 
-Firebase: A cloud-based platform for building web and mobile applications, used for user authentication.
+### Deploy
 
-react-toastify: A library for displaying toast notifications in React applications.
+```bash
+npm run deploy    # builds and pushes to gh-pages branch
+```
 
-Contributing
-Contributions to the project are welcome! If you find any issues or have suggestions for improvements, please open an issue or submit a pull request.
+## Tech Stack
 
-License
-This project is licensed under the MIT License.
+- React 18, React Router
+- Vite
+- Axios
+- Formik + Yup (form validation)
 
+## Where It Needs to Go
 
+- Upgrade dependencies (React 18 / Vite 4 are behind current)
+- Add tests
 
+## How to Proceed
 
+1. Create a `.env` file with the variables listed above (get a TMDB API key from themoviedb.org).
+2. `npm install && npm run dev`
+
+## Licence
+
+MIT
